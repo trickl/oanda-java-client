@@ -1,0 +1,40 @@
+{
+  "lastTransactionID": "6368",
+  "orderCreateTransaction": {
+    "accountID": "<ACCOUNT>",
+    "batchID": "6367",
+    "id": "6367",
+    "instrument": "EUR_USD",
+    "positionFill": "DEFAULT",
+    "reason": "CLIENT_ORDER",
+    "time": "2016-06-22T18:41:29.264030555Z",
+    "timeInForce": "FOK",
+    "type": "MARKET_ORDER",
+    "units": "100",
+    "userID": 123456789
+  },
+  "orderFillTransaction": {
+    "accountBalance": "43650.75945",
+    "accountID": "<ACCOUNT>",
+    "batchID": "6367",
+    "financing": "0.00000",
+    "id": "6368",
+    "instrument": "EUR_USD",
+    "orderID": "6367",
+    "pl": "0.00000",
+    "price": "1.13027",
+    "reason": "MARKET_ORDER",
+    "time": "2016-06-22T18:41:29.264030555Z",
+    "tradeOpened": {
+      "tradeID": "6368",
+      "units": "100"
+    },
+    "type": "ORDER_FILL",
+    "units": "100",
+    "userID": 123456789
+  },
+  "relatedTransactionIDs": [
+    "6367",
+    "6368"
+  ]
+}

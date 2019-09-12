@@ -1,0 +1,45 @@
+{
+  "orderBook": {
+    "instrument": "USD_JPY",
+    "time": "2017-01-10T14:40:00Z",
+    "price": "115.774",
+    "bucketWidth": "0.050",
+    "buckets": [
+      {
+        "price": "0.000",
+        "longCountPercent": "0.0000",
+        "shortCountPercent": "0.0106"
+      },
+      {
+        "price": "80.900",
+        "longCountPercent": "0.0106",
+        "shortCountPercent": "0.0000"
+      },
+      {
+        "price": "115.450",
+        "longCountPercent": "0.1583",
+        "shortCountPercent": "0.0317"
+      },
+      {
+        "price": "115.500",
+        "longCountPercent": "0.3378",
+        "shortCountPercent": "0.1161"
+      },
+      {
+        "price": "115.550",
+        "longCountPercent": "0.2428",
+        "shortCountPercent": "0.1161"
+      },
+      {
+        "price": "116.000",
+        "longCountPercent": "0.4434",
+        "shortCountPercent": "0.1689"
+      },
+      {
+        "price": "150.000",
+        "longCountPercent": "0.0000",
+        "shortCountPercent": "0.0106"
+      }
+    ]
+  }
+}

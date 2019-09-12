@@ -1,0 +1,17 @@
+{
+    "lastTransactionID": "6397",
+    "trades": [
+      {
+        "currentUnits": "-600",
+        "financing": "0.00000",
+        "id": "6397",
+        "initialUnits": "-600",
+        "instrument": "USD_CAD",
+        "openTime": "2016-06-22T18:41:48.262344782Z",
+        "price": "1.28241",
+        "realizedPL": "0.00000",
+        "state": "OPEN",
+        "unrealizedPL": "-0.08525"
+      }
+    ]
+  }

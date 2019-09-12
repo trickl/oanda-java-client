@@ -1,0 +1,12 @@
+{
+  "accounts": [
+    {
+      "id": "<ACCOUNT_A>", 
+      "tags": []
+    },
+    {
+      "id": "<ACCOUNT_B>", 
+      "tags": []
+    }
+  ]
+}

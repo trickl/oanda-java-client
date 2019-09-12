@@ -1,0 +1,23 @@
+{
+    "lastTransactionID": "6412", 
+    "transaction": {
+      "accountBalance": "43650.51319", 
+      "accountID": "<ACCOUNT>", 
+      "batchID": "6409", 
+      "financing": "0.00000", 
+      "id": "6410", 
+      "instrument": "EUR_USD", 
+      "orderID": "6409", 
+      "pl": "0.00000", 
+      "price": "1.13031", 
+      "reason": "MARKET_ORDER", 
+      "time": "2016-06-22T18:41:52.655959799Z", 
+      "tradeOpened": {
+        "tradeID": "6410", 
+        "units": "100"
+      }, 
+      "type": "ORDER_FILL", 
+      "units": "100", 
+      "userID": 12345
+    }
+  }

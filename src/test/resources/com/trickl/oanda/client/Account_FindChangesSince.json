@@ -1,0 +1,207 @@
+{
+  "changes": {
+    "ordersCancelled": [], 
+    "ordersCreated": [], 
+    "ordersFilled": [
+      {
+        "createTime": "2016-06-22T18:32:01.344836338Z", 
+        "filledTime": "2016-06-22T18:32:01.344836338Z", 
+        "fillingTransactionID": "6360", 
+        "id": "6359", 
+        "instrument": "USD_CAD", 
+        "positionFill": "DEFAULT", 
+        "state": "FILLED", 
+        "timeInForce": "FOK", 
+        "tradeOpenedID": "6360", 
+        "type": "MARKET", 
+        "units": "-100"
+      }, 
+      {
+        "createTime": "2016-06-22T18:32:01.350319712Z", 
+        "filledTime": "2016-06-22T18:32:01.350319712Z", 
+        "fillingTransactionID": "6362", 
+        "id": "6361", 
+        "instrument": "EUR_USD", 
+        "positionFill": "DEFAULT", 
+        "state": "FILLED", 
+        "timeInForce": "FOK", 
+        "tradeOpenedID": "6362", 
+        "type": "MARKET", 
+        "units": "100"
+      }
+    ], 
+    "ordersTriggered": [], 
+    "positions": [
+      {
+        "instrument": "USD_CAD", 
+        "long": {
+          "pl": "-483.91941", 
+          "resettablePL": "-483.91941", 
+          "units": "0"
+        }, 
+        "pl": "-486.15018", 
+        "resettablePL": "-486.15018", 
+        "short": {
+          "averagePrice": "1.28324", 
+          "pl": "-2.23077", 
+          "resettablePL": "-2.23077", 
+          "tradeIDs": [
+            "6360"
+          ], 
+          "units": "-100"
+        }
+      }, 
+      {
+        "instrument": "EUR_USD", 
+        "long": {
+          "averagePrice": "1.13067", 
+          "pl": "-54344.82371", 
+          "resettablePL": "-54344.82371", 
+          "tradeIDs": [
+            "6362"
+          ], 
+          "units": "100"
+        }, 
+        "pl": "-54300.41484", 
+        "resettablePL": "-54300.41484", 
+        "short": {
+          "pl": "44.40887", 
+          "resettablePL": "44.40887", 
+          "units": "0"
+        }
+      }
+    ], 
+    "tradesClosed": [], 
+    "tradesOpened": [
+      {
+        "currentUnits": "100", 
+        "financing": "0.00000", 
+        "id": "6362", 
+        "initialUnits": "100", 
+        "instrument": "EUR_USD", 
+        "openTime": "2016-06-22T18:32:01.350319712Z", 
+        "price": "1.13067", 
+        "realizedPL": "0.00000", 
+        "state": "OPEN"
+      }, 
+      {
+        "currentUnits": "-100", 
+        "financing": "0.00000", 
+        "id": "6360", 
+        "initialUnits": "-100", 
+        "instrument": "USD_CAD", 
+        "openTime": "2016-06-22T18:32:01.344836338Z", 
+        "price": "1.28324", 
+        "realizedPL": "0.00000", 
+        "state": "OPEN"
+      }
+    ], 
+    "tradesReduced": [], 
+    "transactions": [
+      {
+        "accountID": "<ACCOUNT>", 
+        "batchID": "6359", 
+        "id": "6359", 
+        "instrument": "USD_CAD", 
+        "positionFill": "DEFAULT", 
+        "reason": "CLIENT_ORDER", 
+        "time": "2016-06-22T18:32:01.344836338Z", 
+        "timeInForce": "FOK", 
+        "type": "MARKET_ORDER", 
+        "units": "-100", 
+        "userID": 123456789
+      }, 
+      {
+        "accountBalance": "43650.78835", 
+        "accountID": "<ACCOUNT>", 
+        "batchID": "6359", 
+        "financing": "0.00000", 
+        "id": "6360", 
+        "instrument": "USD_CAD", 
+        "orderID": "6359", 
+        "pl": "0.00000", 
+        "price": "1.28324", 
+        "reason": "MARKET_ORDER", 
+        "time": "2016-06-22T18:32:01.344836338Z", 
+        "tradeOpened": {
+          "tradeID": "6360", 
+          "units": "-100"
+        }, 
+        "type": "ORDER_FILL", 
+        "units": "-100", 
+        "userID": 123456789
+      }, 
+      {
+        "accountID": "<ACCOUNT>", 
+        "batchID": "6361", 
+        "id": "6361", 
+        "instrument": "EUR_USD", 
+        "positionFill": "DEFAULT", 
+        "reason": "CLIENT_ORDER", 
+        "time": "2016-06-22T18:32:01.350319712Z", 
+        "timeInForce": "FOK", 
+        "type": "MARKET_ORDER", 
+        "units": "100", 
+        "userID": 123456789
+      }, 
+      {
+        "accountBalance": "43650.78835", 
+        "accountID": "<ACCOUNT>", 
+        "batchID": "6361", 
+        "financing": "0.00000", 
+        "id": "6362", 
+        "instrument": "EUR_USD", 
+        "orderID": "6361", 
+        "pl": "0.00000", 
+        "price": "1.13067", 
+        "reason": "MARKET_ORDER", 
+        "time": "2016-06-22T18:32:01.350319712Z", 
+        "tradeOpened": {
+          "tradeID": "6362", 
+          "units": "100"
+        }, 
+        "type": "ORDER_FILL", 
+        "units": "100", 
+        "userID": 123456789
+      }
+    ]
+  }, 
+  "lastTransactionID": "6362", 
+  "state": {
+    "NAV": "43650.75945", 
+    "marginAvailable": "43646.67432", 
+    "marginCloseoutMarginUsed": "4.08531", 
+    "marginCloseoutNAV": "43650.77342", 
+    "marginCloseoutPercent": "0.00005", 
+    "marginCloseoutUnrealizedPL": "-0.01493", 
+    "marginUsed": "4.08513", 
+    "orders": [], 
+    "positionValue": "204.25656", 
+    "positions": [
+      {
+        "instrument": "EUR_USD", 
+        "longUnrealizedPL": "-0.01246", 
+        "netUnrealizedPL": "-0.01246", 
+        "shortUnrealizedPL": "0.00000"
+      }, 
+      {
+        "instrument": "USD_CAD", 
+        "longUnrealizedPL": "0.00000", 
+        "netUnrealizedPL": "-0.01644", 
+        "shortUnrealizedPL": "-0.01644"
+      }
+    ], 
+    "trades": [
+      {
+        "id": "6362", 
+        "unrealizedPL": "-0.01246"
+      }, 
+      {
+        "id": "6360", 
+        "unrealizedPL": "-0.01644"
+      }
+    ], 
+    "unrealizedPL": "-0.02890", 
+    "withdrawalLimit": "43646.67432"
+  }
+}

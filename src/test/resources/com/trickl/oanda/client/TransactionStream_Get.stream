@@ -1,0 +1,4 @@
+{"lastTransactionID":"776","time":"2016-09-20T18:18:19.335449554Z","type":"HEARTBEAT"}
+{"accountID":"101-002-1179508-001","batchID":"777","id":"777","instrument":"EUR_USD","positionFill":"DEFAULT","reason":"CLIENT_ORDER","time":"2016-09-20T18:18:22.126490230Z","timeInForce":"FOK","type":"MARKET_ORDER","units":"100","userID":1179508}
+{"accountBalance":"6505973.49885","accountID":"<ACCOUNT>","batchID":"777","financing":"0.00000","id":"778","instrument":"EUR_USD","orderID":"777","pl":"0.00000","price":"1.11625","reason":"MARKET_ORDER","time":"2016-09-20T18:18:22.126490230Z","tradeOpened":{"tradeID":"778","units":"100"},"type":"ORDER_FILL","units":"100","userID":1179508}
+{"lastTransactionID":"778","time":"2016-09-20T18:18:24.335560658Z","type":"HEARTBEAT"}

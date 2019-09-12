@@ -1,0 +1,43 @@
+{
+  "lastTransactionID": "6376",
+  "orders": [
+    {
+      "clientExtensions": {
+        "comment": "New idea for trading",
+        "id": "my_order_100",
+        "tag": "strategy_9"
+      },
+      "createTime": "2016-06-22T18:41:29.294265338Z",
+      "id": "6375",
+      "instrument": "EUR_CAD",
+      "partialFill": "DEFAULT_FILL",
+      "positionFill": "POSITION_DEFAULT",
+      "price": "1.30000",
+      "replacesOrderID": "6373",
+      "state": "PENDING",
+      "timeInForce": "GTC",
+      "triggerCondition": "TRIGGER_DEFAULT",
+      "type": "MARKET_IF_TOUCHED",
+      "units": "10000"
+    },
+    {
+      "clientExtensions": {
+        "comment": "New idea for trading",
+        "id": "my_order_100",
+        "tag": "strategy_9"
+      },
+      "createTime": "2016-06-22T18:41:29.294265338Z",
+      "id": "6376",
+      "instrument": "EUR_CAD",
+      "partialFill": "DEFAULT_FILL",
+      "positionFill": "POSITION_DEFAULT",
+      "price": "1.30000",
+      "replacesOrderID": "6374",
+      "state": "PENDING",
+      "timeInForce": "GTC",
+      "triggerCondition": "TRIGGER_DEFAULT",
+      "type": "MARKET_IF_TOUCHED",
+      "units": "10000"
+    }
+  ]
+}

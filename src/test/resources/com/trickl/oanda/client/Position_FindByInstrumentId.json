@@ -1,0 +1,26 @@
+{
+  "lastTransactionID": "6387", 
+  "position": {
+    "instrument": "EUR_USD", 
+    "long": {
+      "averagePrice": "1.13032", 
+      "pl": "-54344.85056", 
+      "resettablePL": "-54344.85056", 
+      "tradeIDs": [
+        "6383", 
+        "6385"
+      ], 
+      "units": "350", 
+      "unrealizedPL": "-0.04700"
+    }, 
+    "pl": "-54300.44169", 
+    "resettablePL": "-54300.44169", 
+    "short": {
+      "pl": "44.40887", 
+      "resettablePL": "44.40887", 
+      "units": "0", 
+      "unrealizedPL": "0.00000"
+    }, 
+    "unrealizedPL": "-0.04700"
+  }
+}

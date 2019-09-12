@@ -1,0 +1,71 @@
+{
+    "lastTransactionID": "6412", 
+    "transactions": [
+      {
+        "accountID": "<ACCOUNT>", 
+        "batchID": "6409", 
+        "id": "6409", 
+        "instrument": "EUR_USD", 
+        "positionFill": "DEFAULT", 
+        "reason": "CLIENT_ORDER", 
+        "time": "2016-06-22T18:41:52.655959799Z", 
+        "timeInForce": "FOK", 
+        "type": "MARKET_ORDER", 
+        "units": "100", 
+        "userID": 12345
+      }, 
+      {
+        "accountBalance": "43650.51319", 
+        "accountID": "<ACCOUNT>", 
+        "batchID": "6409", 
+        "financing": "0.00000", 
+        "id": "6410", 
+        "instrument": "EUR_USD", 
+        "orderID": "6409", 
+        "pl": "0.00000", 
+        "price": "1.13031", 
+        "reason": "MARKET_ORDER", 
+        "time": "2016-06-22T18:41:52.655959799Z", 
+        "tradeOpened": {
+          "tradeID": "6410", 
+          "units": "100"
+        }, 
+        "type": "ORDER_FILL", 
+        "units": "100", 
+        "userID": 12345
+      }, 
+      {
+        "accountID": "<ACCOUNT>", 
+        "batchID": "6411", 
+        "id": "6411", 
+        "instrument": "USD_CAD", 
+        "positionFill": "DEFAULT", 
+        "reason": "CLIENT_ORDER", 
+        "time": "2016-06-22T18:41:52.660593788Z", 
+        "timeInForce": "FOK", 
+        "type": "MARKET_ORDER", 
+        "units": "500", 
+        "userID": 12345
+      }, 
+      {
+        "accountBalance": "43650.51319", 
+        "accountID": "<ACCOUNT>", 
+        "batchID": "6411", 
+        "financing": "0.00000", 
+        "id": "6412", 
+        "instrument": "USD_CAD", 
+        "orderID": "6411", 
+        "pl": "0.00000", 
+        "price": "1.28260", 
+        "reason": "MARKET_ORDER", 
+        "time": "2016-06-22T18:41:52.660593788Z", 
+        "tradeOpened": {
+          "tradeID": "6412", 
+          "units": "500"
+        }, 
+        "type": "ORDER_FILL", 
+        "units": "500", 
+        "userID": 12345
+      }
+    ]
+  }
