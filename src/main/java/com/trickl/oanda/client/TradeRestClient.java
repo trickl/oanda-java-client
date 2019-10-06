@@ -4,8 +4,8 @@ import com.trickl.model.oanda.instrument.CurrencyPair;
 import com.trickl.model.oanda.trade.GetTradesResponse;
 import com.trickl.model.oanda.trade.Trade;
 import com.trickl.model.oanda.trade.TradeStateFilter;
-import com.trickl.oanda.text.CurrencyPairFormat;
 import com.trickl.oanda.validation.ServerResponseValidator;
+import com.trickl.text.oanda.CurrencyPairFormat;
 
 import java.text.MessageFormat;
 import java.util.List;

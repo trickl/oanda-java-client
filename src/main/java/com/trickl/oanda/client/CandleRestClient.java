@@ -4,9 +4,10 @@ import com.trickl.model.oanda.instrument.Candlestick;
 import com.trickl.model.oanda.instrument.CandlestickGranularity;
 import com.trickl.model.oanda.instrument.CurrencyPair;
 import com.trickl.model.oanda.instrument.GetCandlesResponse;
-import com.trickl.oanda.text.CurrencyPairFormat;
-import com.trickl.oanda.text.Rfc3339;
 import com.trickl.oanda.validation.ServerResponseValidator;
+import com.trickl.text.oanda.CurrencyPairFormat;
+import com.trickl.text.oanda.Rfc3339;
+
 import java.text.MessageFormat;
 import java.time.Instant;
 import lombok.RequiredArgsConstructor;

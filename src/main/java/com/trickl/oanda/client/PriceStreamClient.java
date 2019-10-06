@@ -2,8 +2,8 @@ package com.trickl.oanda.client;
 
 import com.trickl.model.oanda.instrument.CurrencyPair;
 import com.trickl.model.oanda.pricing.common.PriceStreamMessage;
-import com.trickl.oanda.text.CurrencyPairFormat;
 import com.trickl.oanda.validation.ServerResponseValidator;
+import com.trickl.text.oanda.CurrencyPairFormat;
 import java.text.MessageFormat;
 import java.util.List;
 import java.util.stream.Collectors;

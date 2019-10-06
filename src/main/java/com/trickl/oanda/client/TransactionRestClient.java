@@ -5,8 +5,8 @@ import com.trickl.model.oanda.transaction.GetTransactionsByCreatedBetweenRespons
 import com.trickl.model.oanda.transaction.GetTransactionsByIdsBetweenResponse;
 import com.trickl.model.oanda.transaction.Transaction;
 import com.trickl.model.oanda.transaction.TransactionFilter;
-import com.trickl.oanda.text.Rfc3339;
 import com.trickl.oanda.validation.ServerResponseValidator;
+import com.trickl.text.oanda.Rfc3339;
 
 import java.text.MessageFormat;
 import java.time.Instant;
