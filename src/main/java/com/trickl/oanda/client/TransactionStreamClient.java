@@ -4,7 +4,6 @@ import com.trickl.model.oanda.transaction.TransactionStreamMessage;
 import com.trickl.oanda.validation.ServerResponseValidator;
 import java.text.MessageFormat;
 import lombok.RequiredArgsConstructor;
-
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 

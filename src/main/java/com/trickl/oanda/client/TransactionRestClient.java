@@ -7,7 +7,6 @@ import com.trickl.model.oanda.transaction.Transaction;
 import com.trickl.model.oanda.transaction.TransactionFilter;
 import com.trickl.oanda.validation.ServerResponseValidator;
 import com.trickl.text.oanda.Rfc3339;
-
 import java.text.MessageFormat;
 import java.time.Instant;
 import java.util.Arrays;
@@ -19,7 +18,6 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.util.UriComponentsBuilder;
-
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -165,10 +163,12 @@ public class TransactionRestClient {
     String startingTransactionId = parameters.getFirst("from");
     String endingTransactionId = parameters.getFirst("to");
     String typeList = parameters.getFirst("type");
-    List<TransactionFilter> filters = typeList == null ? null :
-        Arrays.asList(typeList.split(",")).stream()
-            .map(token -> Enum.valueOf(TransactionFilter.class, token))
-            .collect(Collectors.toList());
+    List<TransactionFilter> filters =
+        typeList == null
+            ? null
+            : Arrays.asList(typeList.split(",")).stream()
+                .map(token -> Enum.valueOf(TransactionFilter.class, token))
+                .collect(Collectors.toList());
 
     return findByIdBetweenAndFilterIn(startingTransactionId, endingTransactionId, filters);
   }

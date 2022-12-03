@@ -28,10 +28,10 @@ public class AccountRestClient {
   private final ServerResponseValidator validator = new ServerResponseValidator();
 
   /**
-   *  Get the account data. 
-   * 
+   * Get the account data.
+   *
    * @return A single account
-  */
+   */
   public Mono<Account> get() {
     return findById(accountId);
   }

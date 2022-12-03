@@ -13,7 +13,6 @@ import com.trickl.oanda.client.TradeRestClient;
 import com.trickl.oanda.client.TransactionIdClient;
 import com.trickl.oanda.client.TransactionRestClient;
 import com.trickl.oanda.client.TransactionStreamClient;
-
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -79,7 +78,7 @@ public class OandaConfiguration {
 
   @Bean
   ObjectMapper oandaObjectMapper() {
-    ObjectMapper mapper = new ObjectMapper();    
+    ObjectMapper mapper = new ObjectMapper();
     mapper.registerModule(new JavaTimeModule());
     mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
     return mapper;
@@ -103,21 +102,22 @@ public class OandaConfiguration {
         .defaultHeader("Accept-Datetime-Format", "RFC3339")
         .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
         .defaultHeader(HttpHeaders.ACCEPT, MediaType.APPLICATION_OCTET_STREAM_VALUE)
-        .exchangeStrategies(ExchangeStrategies.builder()
-            .codecs(configurer -> 
-              configurer.defaultCodecs().jackson2JsonDecoder(
-                  new Jackson2JsonDecoder(
-                    oandaObjectMapper(), MediaType.APPLICATION_OCTET_STREAM)              
-              )
-            )
-            .build())
+        .exchangeStrategies(
+            ExchangeStrategies.builder()
+                .codecs(
+                    configurer ->
+                        configurer
+                            .defaultCodecs()
+                            .jackson2JsonDecoder(
+                                new Jackson2JsonDecoder(
+                                    oandaObjectMapper(), MediaType.APPLICATION_OCTET_STREAM)))
+                .build())
         .build();
   }
 
   @Bean
   AccountRestClient oandaAccountRestClient() {
-    return new AccountRestClient(
-        oandaRestClient(), accountId, oandaTransactionIdClient());
+    return new AccountRestClient(oandaRestClient(), accountId, oandaTransactionIdClient());
   }
 
   @Bean
@@ -132,26 +132,22 @@ public class OandaConfiguration {
 
   @Bean
   OrderRestClient oandaOrderRestClient() {
-    return new OrderRestClient(
-        oandaRestClient(), accountId, oandaTransactionIdClient());
+    return new OrderRestClient(oandaRestClient(), accountId, oandaTransactionIdClient());
   }
 
   @Bean
   PositionRestClient oandaPositionRestClient() {
-    return new PositionRestClient(
-        oandaRestClient(), accountId, oandaTransactionIdClient());
+    return new PositionRestClient(oandaRestClient(), accountId, oandaTransactionIdClient());
   }
 
   @Bean
   TradeRestClient oandaTradeRestClient() {
-    return new TradeRestClient(
-        oandaRestClient(), accountId, oandaTransactionIdClient());
+    return new TradeRestClient(oandaRestClient(), accountId, oandaTransactionIdClient());
   }
 
   @Bean
   TransactionRestClient oandaTransactionRestClient() {
-    return new TransactionRestClient(
-        oandaRestClient(), accountId, oandaTransactionIdClient());
+    return new TransactionRestClient(oandaRestClient(), accountId, oandaTransactionIdClient());
   }
 
   @Bean
@@ -161,13 +157,11 @@ public class OandaConfiguration {
 
   @Bean
   PriceStreamClient oandaPriceStreamClient() {
-    return new PriceStreamClient(
-        oandaStreamClient(), accountId, true);
+    return new PriceStreamClient(oandaStreamClient(), accountId, true);
   }
 
   @Bean
   TransactionStreamClient oandaTransactionStreamClient() {
-    return new TransactionStreamClient(
-        oandaStreamClient(), accountId, true);
+    return new TransactionStreamClient(oandaStreamClient(), accountId, true);
   }
 }

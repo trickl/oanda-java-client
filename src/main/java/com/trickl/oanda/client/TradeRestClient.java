@@ -6,7 +6,6 @@ import com.trickl.model.oanda.trade.Trade;
 import com.trickl.model.oanda.trade.TradeStateFilter;
 import com.trickl.oanda.validation.ServerResponseValidator;
 import com.trickl.text.oanda.CurrencyPairFormat;
-
 import java.text.MessageFormat;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -14,7 +13,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.reactive.function.client.WebClient;
-
 import reactor.core.publisher.Flux;
 
 @RequiredArgsConstructor
@@ -71,10 +69,10 @@ public class TradeRestClient {
         .retrieve()
         .bodyToMono(GetTradesResponse.class)
         .doOnNext(
-          response -> {
-            validator.validate(response);
-            transactionIdClient.publish(response.getLastTransactionId());
-          })
+            response -> {
+              validator.validate(response);
+              transactionIdClient.publish(response.getLastTransactionId());
+            })
         .flatMapIterable(GetTradesResponse::getTrades);
   }
 }
