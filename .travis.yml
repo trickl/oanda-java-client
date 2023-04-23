@@ -1,6 +1,6 @@
 language: java
 jdk:
-  - openjdk8
+- openjdk11
 env:
   global:
   - CC_TEST_REPORTER_ID=c797b7daf01dcb0506ba34f974da26e67d4957a86fff49a9a13af460a7a6e7c1
@@ -25,16 +25,10 @@ before_deploy:
 - export project_version=$(mvn help:evaluate -N -Dexpression=project.version|grep
   -v '\[')
 deploy:
-- provider: script
-  script: ".travis/deploy.sh"
-  skip_cleanup: true
-  on:
-    repo: trickl/oanda-java-client
-    all_branches: true
-- provider: releases
-  skip_cleanup: true
+  provider: releases
   api_key:
-    secure: I2yiS+EmdMJfQRTDS7n8OOz+/hFC8NpjVGPnAYI4o4TkuTE6t+M0pa7nHCMmE7amfUgx3rhgu8PFj482nlpr6F4yS/9C2M6gCElusv5GcO067XATx4TYfiMdPKze8900pR4nPs35d9ln7OGfPiehuG8zIXCNMNzXN5G+h+doTrdLCynOR1eAj+0iiSx+rkAnobJEHSllNIfzjlqyLVAiGhh13hIrBb6Pw0SvbtzEyc9d895scsX1LXm6D/nsttF+R+unkygDPXnokhIVEFwSiO5ilWCoQpzPZt8Ut9UGN6ZqKYM1IWzJmn1pHnbZGxJtDw9YR3i2blrzjRthuKy7r8QbI6QeszorT2xA+zOxvu+xNgSbmS7N9UXjnHC+k3F5z9B4blrZ4vk2UQExOXWS2pNjIVFKO65DvjeC8kS5k7bNj7DXBm9MLMimLY1vkz5JlOKgCndzZijw/EqCApXylsZma/WfQvXrllynEP+O7x59jjn+U8Tj8PMuwqThCJiPpuvHhZptC0b6gVDvUdI8eHvBDl2YOYbIdC3Ddc9+4U8/AgROJwLrPbhcQhRh+toc8j1fFdKVKld4Hq/sbs9sGOuqgpNI1urzJqhCUEH04p2YJrbbQyznweXAY5FD6lInG49d7cnHWzKnXAK9TqVDFUR8A5S2cU9SVFRErUJpA4s=
+    secure: kEKtxcHlSwEQAnSGlTKPJwTvVXUXE1+wYXaSuDJ7cpgdmQRWiW/OrFa5kCaJruNWTLzjPTrJLAJ9hbRJtxOxNIQwBAmCDFWM2OPtyfk53L1EpKoJpl10WHV1wbcMOpiHHfxy9Vx2SDvQUAoZbfRryojzl/bmnAaFHDIWCFmcPzNEGxN8XWLkz1K0icJ+ari44M+9WjwX3jDV0WTAdGjhBytnQSa+CE10ydCTXbAOFYppenEsaPsXv+2RazijQRUMtlv8Lum9jGPn2D15pQn4R4Mty0f3AMh91OlnEn+9oJnsVvq0R/Fa+hL/YxzU1h8uFTwyGmzDrH3E+TCx8ucJGeo5gZGDJXHHtiy+hxeJU0UK1BeCIP2ya+388qDcz61wV4uYAyHHWLL7JKRY1w4AugUAPeB/Y43V/Mg0YpAAw21ecXfEeftxpunLWtW6YyXH8Xr1OhDnmc8u4EjlPQc8ZyrnN3+EoFTBr5BG52EC6Q2IB6SS2teitz7E41cleiij3QmIQ88sRWc01ym5tXZqBvCMIHrnONrTGIJYyDeKdsjo08R5qermySB3Gnx6JGPZ1Wj6KYVIeJ462V6yCCzhFYGJZMkl0dgREDKClJvXahBlwO1P66nSmuntpOEMOJSiDrGDsNUJvnXSy9z6kVXriOVu8BPzti0ryPVcLussggs=
   file: ".travis.yml"
   on:
     repo: trickl/oanda-java-client
+  skip_cleanup: 'true'

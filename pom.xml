@@ -262,9 +262,9 @@
               <execution>
                 <phase>test</phase>
                 <configuration>
-                  <tasks>
+                  <target>
                     <replace file="target/jacoco-ut/jacoco.xml" token="com/" value="src/main/java/com/"/>
-                  </tasks>
+                  </target>
                 </configuration>
                 <goals>
                   <goal>run</goal>
