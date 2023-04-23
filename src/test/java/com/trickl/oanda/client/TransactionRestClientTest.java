@@ -30,14 +30,14 @@ public class TransactionRestClientTest extends BaseRestClientTest {
   private TransactionRestClient transactionRestClient;
 
   @BeforeEach
-  private void setup() {
+  public void setup() {
     startServer();
     transactionRestClient =
         new TransactionRestClient(webClient, "ACCOUNT", new TransactionIdClient());
   }
 
   @AfterEach
-  private void shutdown() throws IOException {
+  public void shutdown() throws IOException {
     server.shutdown();
   }
 

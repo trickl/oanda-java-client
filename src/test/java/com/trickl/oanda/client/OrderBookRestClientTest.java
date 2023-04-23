@@ -27,13 +27,13 @@ public class OrderBookRestClientTest extends BaseRestClientTest {
   private OrderBookRestClient orderBookRestClient;
 
   @BeforeEach
-  private void setup() {
+  public void setup() {
     startServer();
     orderBookRestClient = new OrderBookRestClient(webClient);
   }
 
   @AfterEach
-  private void shutdown() throws IOException {
+  public void shutdown() throws IOException {
     server.shutdown();
   }
 

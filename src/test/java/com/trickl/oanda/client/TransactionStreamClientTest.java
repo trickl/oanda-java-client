@@ -27,13 +27,13 @@ public class TransactionStreamClientTest extends BaseRestClientTest {
   private TransactionStreamClient transactionStreamClient;
 
   @BeforeEach
-  private void setup() {
+  public void setup() {
     startServer();
     transactionStreamClient = new TransactionStreamClient(webClient, "ACCOUNT", true);
   }
 
   @AfterEach
-  private void shutdown() throws IOException {
+  public void shutdown() throws IOException {
     server.shutdown();
   }
 

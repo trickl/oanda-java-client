@@ -28,13 +28,13 @@ public class TradeRestClientTest extends BaseRestClientTest {
   private TradeRestClient tradeRestClient;
 
   @BeforeEach
-  private void setup() {
+  public void setup() {
     startServer();
     tradeRestClient = new TradeRestClient(webClient, "ACCOUNT", new TransactionIdClient());
   }
 
   @AfterEach
-  private void shutdown() throws IOException {
+  public void shutdown() throws IOException {
     server.shutdown();
   }
 

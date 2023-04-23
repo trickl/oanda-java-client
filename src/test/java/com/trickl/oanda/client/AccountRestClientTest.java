@@ -27,13 +27,13 @@ public class AccountRestClientTest extends BaseRestClientTest {
   private AccountRestClient accountRestClient;
 
   @BeforeEach
-  private void setup() {
+  public void setup() {
     startServer();
     accountRestClient = new AccountRestClient(webClient, "ACCOUNT", new TransactionIdClient());
   }
 
   @AfterEach
-  private void shutdown() throws IOException {
+  public void shutdown() throws IOException {
     server.shutdown();
   }
 

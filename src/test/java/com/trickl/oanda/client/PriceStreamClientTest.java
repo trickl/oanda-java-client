@@ -29,13 +29,13 @@ public class PriceStreamClientTest extends BaseRestClientTest {
   private PriceStreamClient priceStreamClient;
 
   @BeforeEach
-  private void setup() {
+  public void setup() {
     startServer();
     priceStreamClient = new PriceStreamClient(webClient, "ACCOUNT", true);
   }
 
   @AfterEach
-  private void shutdown() throws IOException {
+  public void shutdown() throws IOException {
     server.shutdown();
   }
 

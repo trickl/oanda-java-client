@@ -27,13 +27,13 @@ public class PositionRestClientTest extends BaseRestClientTest {
   private PositionRestClient positionRestClient;
 
   @BeforeEach
-  private void setup() {
+  public void setup() {
     startServer();
     positionRestClient = new PositionRestClient(webClient, "ACCOUNT", new TransactionIdClient());
   }
 
   @AfterEach
-  private void shutdown() throws IOException {
+  public void shutdown() throws IOException {
     server.shutdown();
   }
 

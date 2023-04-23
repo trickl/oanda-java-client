@@ -32,13 +32,13 @@ public class OrderRestClientTest extends BaseRestClientTest {
   private OrderRestClient orderRestClient;
 
   @BeforeEach
-  private void setup() {
+  public void setup() {
     startServer();
     orderRestClient = new OrderRestClient(webClient, "ACCOUNT", new TransactionIdClient());
   }
 
   @AfterEach
-  private void shutdown() throws IOException {
+  public void shutdown() throws IOException {
     server.shutdown();
   }
 

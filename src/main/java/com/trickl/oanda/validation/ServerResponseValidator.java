@@ -1,11 +1,11 @@
 package com.trickl.oanda.validation;
 
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.Validation;
+import jakarta.validation.Validator;
 import java.text.MessageFormat;
 import java.util.Set;
 import java.util.stream.Collectors;
-import javax.validation.ConstraintViolation;
-import javax.validation.Validation;
-import javax.validation.Validator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.server.ServerWebInputException;
 
@@ -16,6 +16,7 @@ public class ServerResponseValidator {
 
   /**
    * Validate a server response.
+   *
    * @param <T> The type of response
    * @param response the response to validate
    * @throws ServerWebInputException if validation fails
@@ -30,12 +31,14 @@ public class ServerResponseValidator {
   private static <T> String formatConstraintErrorMessage(Set<ConstraintViolation<T>> violations) {
     return violations.stream()
         .map(
-            violation -> MessageFormat.format(
-                  "At {0} {1} but got {2}}",
-                  new Object[] {
-                    violation.getPropertyPath(), violation.getMessage(), violation.getInvalidValue()
-                  })
-            )
+            violation ->
+                MessageFormat.format(
+                    "At {0} {1} but got {2}}",
+                    new Object[] {
+                      violation.getPropertyPath(),
+                      violation.getMessage(),
+                      violation.getInvalidValue()
+                    }))
         .collect(Collectors.joining(","));
   }
 }

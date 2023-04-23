@@ -27,13 +27,13 @@ public class CandleRestClientTest extends BaseRestClientTest {
   private CandleRestClient candleRestClient;
 
   @BeforeEach
-  private void setup() {
+  public void setup() {
     startServer();
     candleRestClient = new CandleRestClient(webClient);
   }
 
   @AfterEach
-  private void shutdown() throws IOException {
+  public void shutdown() throws IOException {
     server.shutdown();
   }
 
